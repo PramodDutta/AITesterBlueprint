@@ -3,7 +3,7 @@
 <div align="center">
 
 ![AI Tester Blueprint](https://img.shields.io/badge/AI_Tester_Blueprint-Batch_Course-blueviolet?style=for-the-badge&logo=robot)
-![Projects](https://img.shields.io/badge/Projects-15-green?style=for-the-badge)
+![Projects](https://img.shields.io/badge/Projects-19-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 ![Last Updated](https://img.shields.io/badge/Updated-March_2026-blue?style=for-the-badge)
 
@@ -21,7 +21,7 @@
 
 ## 📖 About This Course
 
-The **AI Tester Blueprint** is a project-based course designed to transform QA engineers into AI-powered testing professionals. Across **15 hands-on projects**, you'll progress from local LLM basics to building production-grade AI agents and robust document retrieval systems. Each project introduces new concepts in:
+The **AI Tester Blueprint** is a project-based course designed to transform QA engineers into AI-powered testing professionals. Across **19 hands-on projects**, you'll progress from local LLM basics to building production-grade AI agents, advanced framework integrations, and robust document retrieval systems. Each project introduces new concepts in:
 
 - 🧠 **Local LLM Integration** — Running AI models on your machine using Ollama
 - 🏗️ **Prompt Engineering** — Crafting effective prompts using RICE-POT & B.L.A.S.T. frameworks
@@ -33,6 +33,10 @@ The **AI Tester Blueprint** is a project-based course designed to transform QA e
 - 🔗 **No-Code Automation** — Visual workflow automation with n8n
 - 📚 **Retrieval-Augmented Generation (RAG)** — Giving AI access to your private company data
 - 🧩 **Flow Engineering** — Building visual AI apps with LangFlow
+- 🔌 **MCP Workflows** — Connecting AI systems to browsers and external tools
+- 🏗️ **AI + Test Frameworks** — Using AI to scaffold and review Selenium, Playwright, and API frameworks
+- ⚙️ **CI/CD + AI** — Pipeline summaries, failure triage, and debugging support
+- 🧪 **LLM Testing** — Accuracy, safety, reliability, and evaluator-based QA for LLM apps
 
 ---
 
@@ -288,22 +292,78 @@ ollama pull llama3.2
 
 ---
 
+### 🔹 Project 16: MCP Basics
+
+> **Playwright MCP and JIRA-linked QA execution workflows**
+
+| Aspect | Details |
+|--------|---------|
+| **Focus** | MCP, browser orchestration, evidence capture |
+| **Tech Stack** | Playwright MCP, JIRA workflows, HTML reports |
+| **Key Concept** | Tool-connected QA execution with AI assistance |
+
+📂 **[View Project Folder →](./Project_16_MCP_Basic/README.md)**
+
+---
+
+### 🔹 Project 17: AI + Test Frameworks
+
+> **Use AI to design, scaffold, and review Selenium, Playwright, and API testing frameworks**
+
+| Aspect | Details |
+|--------|---------|
+| **Focus** | Framework architecture, AI-assisted scaffolding |
+| **Tech Stack** | Selenium, Playwright, API frameworks, Markdown learning assets |
+| **Key Concept** | AI-assisted framework engineering |
+
+📂 **[View Project Folder →](./Project_17_AI_Test_Frameworks/README.md)**
+
+---
+
+### 🔹 Project 18: CI/CD + AI
+
+> **Integrate AI into QA pipelines for summaries, triage, and safe debugging support**
+
+| Aspect | Details |
+|--------|---------|
+| **Focus** | CI/CD, reporting, failure triage |
+| **Tech Stack** | Jenkins, GitHub Actions, LLM prompts, pipeline artifacts |
+| **Key Concept** | AI-augmented delivery visibility |
+
+📂 **[View Project Folder →](./Project_18_CICD_AI/README.md)**
+
+---
+
+### 🔹 Project 19: LLM Testing
+
+> **Test LLM systems for accuracy, safety, reliability, hallucinations, and output quality**
+
+| Aspect | Details |
+|--------|---------|
+| **Focus** | LLM QA, evaluation, reliability |
+| **Tech Stack** | DeepEval, Promptfoo, TruLens, OpenAI Evals |
+| **Key Concept** | Testing LLM applications like real software systems |
+
+📂 **[View Project Folder →](./Project_19_LLM_Testing/README.md)**
+
+---
+
 ## 🛠️ Tech Stack
 
 <div align="center">
 
 | Category | Technologies |
 |----------|-------------|
-| **AI/LLM** | Ollama, Llama 3.2, CodeLlama, Groq API, OpenAI |
+| **AI/LLM** | Ollama, Llama 3.2, CodeLlama, Groq API, OpenAI, evaluator tooling |
 | **Backend** | Python (FastAPI), Node.js (Express), TypeScript |
 | **Frontend** | React 18/19, Vite, Vanilla JS, TailwindCSS, shadcn/ui |
 | **Automation** | Selenium, Playwright, TestNG |
-| **Integrations** | JIRA REST API v3, Groq SDK, Ollama SDK |
+| **Integrations** | JIRA REST API v3, Groq SDK, Ollama SDK, MCP |
 | **Storage** | SQLite, localStorage, AstraDB (Vector DB) |
 | **Languages** | Python, JavaScript/TypeScript, Java |
 | **Build Tools** | Maven, npm, Vite |
 | **AI Assistants** | Claude Code, Ollama |
-| **No-Code / Flow** | n8n, LangFlow |
+| **No-Code / Flow** | n8n, LangFlow, MCP |
 
 </div>
 
@@ -343,13 +403,21 @@ graph TD
         E3 --> E4[Project 15: Embeddings Visualizer]
     end
     
-    E --> F[Phase 5: Capstone]
+    E --> F[Phase 5: Tooling & Integrations]
     
-    subgraph "Phase 5: Capstone"
-        F1[Project 7: AI Agent + JIRA]
+    subgraph "Phase 5: Tooling & Integrations"
+        F1[Project 16: MCP Basics] --> F2[Project 17: AI Frameworks]
+        F2 --> F3[Project 18: CI/CD + AI]
+        F3 --> F4[Project 19: LLM Testing]
     end
     
-    F --> G[🎓 AI Tester Ready!]
+    F --> G[Phase 6: Capstone]
+    
+    subgraph "Phase 6: Capstone"
+        G1[Project 7: AI Agent + JIRA]
+    end
+    
+    G --> H[🎓 AI Tester Ready!]
 ```
 
 ---
@@ -373,6 +441,10 @@ AITesterBlueprint/
 ├── Project_13_RAG_with_LangFlow/                   # 🔗 Visual RAG pipelines with LangFlow
 ├── Project_14_RAG_VIBE_CODING/                     # 🧠 Full-stack modular RAG app
 ├── Project_15_Vector_Embeddings_Visualizer/        # 📐 Embeddings + chunking visualizer
+├── Project_16_MCP_Basic/                           # 🔌 MCP basics with Playwright and JIRA workflow concepts
+├── Project_17_AI_Test_Frameworks/                  # 🏗️ AI-assisted test framework engineering
+├── Project_18_CICD_AI/                             # ⚙️ CI/CD pipelines with AI summaries and debugging support
+├── Project_19_LLM_Testing/                         # 🧪 LLM testing, evaluation, and reliability checks
 └── README.md                                      # 📖 This File
 ```
 

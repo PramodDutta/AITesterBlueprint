@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Tester Blueprint | Course Docs</title>
-  <meta name="description" content="Docs-style course overview for AI Tester Blueprint Projects 1 to 15, using a Mintlify-inspired navigation shell and repo-based project content.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2316a34a'/%3E%3Cpath d='M18 20h28v8H18zm0 16h20v8H18z' fill='white'/%3E%3C/svg%3E">
+  <meta name="description" content="Docs-style course overview for AI Tester Blueprint Projects 1 to 19, using a Mintlify-inspired navigation shell and repo-based project content.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d97706'/%3E%3Cpath d='M18 20h28v8H18zm0 16h20v8H18z' fill='white'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,98 +13,103 @@
     :root {
       --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --mono: 'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace;
-      --nav-h: 58px;
-      --sidebar-w: 278px;
-      --radius: 10px;
-      --radius-sm: 6px;
-      --transition: 0.16s ease;
-      --shadow: 0 16px 38px rgba(15, 23, 42, 0.08);
+      --nav-h: 56px;
+      --sidebar-w: 260px;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --transition: 0.2s ease;
     }
 
     :root,
     html[data-theme="light"] {
-      --bg: #ffffff;
-      --bg-1: #f9fafb;
-      --bg-2: #f3f4f6;
-      --panel: #ffffff;
-      --line: #e5e7eb;
-      --line-2: #d1d5db;
-      --text: #111827;
-      --text-2: #374151;
-      --text-3: #6b7280;
-      --text-4: #9ca3af;
-      --accent: #16a34a;
-      --accent-hover: #15803d;
-      --accent-soft: #f0fdf4;
-      --accent-border: #bbf7d0;
-      --accent-text: #166534;
-      --nav-bg: rgba(255,255,255,0.94);
-      --code-bg: #18181b;
-      --code-text: #f4f4f5;
-      --warning-bg: #fff7ed;
-      --warning-text: #c2410c;
+      --bg: #FAFAF8;
+      --bg-1: #F5F4F0;
+      --bg-2: #EEEDE8;
+      --panel: #FFFFFF;
+      --line: #E8E6E1;
+      --line-2: #D9D7D0;
+      --text: #1A1A1A;
+      --text-2: #3D3D3D;
+      --text-3: #737373;
+      --text-4: #A3A3A3;
+      --accent: #D97706;
+      --accent-hover: #B45309;
+      --accent-soft: #FFFBEB;
+      --accent-border: #FDE68A;
+      --accent-text: #92400E;
+      --nav-bg: rgba(250, 250, 248, 0.92);
+      --code-bg: #1C1917;
+      --code-text: #F5F5F4;
+      --warning-bg: #FFF7ED;
+      --warning-text: #C2410C;
+      --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+      --card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
       color-scheme: light;
     }
 
     html[data-theme="dark"] {
-      --bg: #0f0f0f;
-      --bg-1: #161616;
-      --bg-2: #1f1f1f;
-      --panel: #0f0f0f;
-      --line: #242424;
-      --line-2: #303030;
-      --text: #f4f4f5;
-      --text-2: #d4d4d8;
-      --text-3: #a1a1aa;
-      --text-4: #52525b;
-      --accent: #22c55e;
-      --accent-hover: #4ade80;
-      --accent-soft: #052e16;
-      --accent-border: #14532d;
-      --accent-text: #4ade80;
-      --nav-bg: rgba(15,15,15,0.94);
-      --code-bg: #09090b;
-      --code-text: #f4f4f5;
-      --warning-bg: #431407;
-      --warning-text: #fb923c;
+      --bg: #171717;
+      --bg-1: #1E1E1E;
+      --bg-2: #262626;
+      --panel: #1E1E1E;
+      --line: #2E2E2E;
+      --line-2: #3D3D3D;
+      --text: #FAFAF9;
+      --text-2: #D6D3D1;
+      --text-3: #A8A29E;
+      --text-4: #78716C;
+      --accent: #F59E0B;
+      --accent-hover: #FBBF24;
+      --accent-soft: #292524;
+      --accent-border: #44403C;
+      --accent-text: #FCD34D;
+      --nav-bg: rgba(23, 23, 23, 0.92);
+      --code-bg: #0C0A09;
+      --code-text: #F5F5F4;
+      --warning-bg: #292524;
+      --warning-text: #FB923C;
+      --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      --card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.3);
       color-scheme: dark;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
     body {
-      margin: 0;
       font-family: var(--font);
       font-size: 15px;
-      line-height: 1.65;
+      line-height: 1.7;
       background: var(--bg);
       color: var(--text);
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
     }
+
     a { color: inherit; text-decoration: none; }
+
     code {
       font-family: var(--mono);
-      font-size: 12px;
+      font-size: 13px;
       background: var(--bg-2);
-      border: 1px solid var(--line);
-      border-radius: 4px;
-      padding: 1px 5px;
+      border-radius: 5px;
+      padding: 2px 6px;
       color: var(--accent-text);
     }
+
     pre {
-      margin: 0;
-      padding: 18px;
+      padding: 20px;
       overflow-x: auto;
       background: var(--code-bg);
       color: var(--code-text);
-      border-radius: 12px;
-      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: var(--radius);
       font-family: var(--mono);
-      font-size: 12.5px;
+      font-size: 13px;
       line-height: 1.7;
     }
 
+    /* ─── Topbar ─── */
     .topbar {
       position: fixed;
       top: 0;
@@ -115,9 +120,11 @@
       align-items: center;
       background: var(--nav-bg);
       border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       z-index: 300;
     }
+
     .brand-block {
       width: var(--sidebar-w);
       min-width: var(--sidebar-w);
@@ -125,86 +132,105 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 0 18px 0 20px;
+      padding: 0 20px;
       border-right: 1px solid var(--line);
       flex-shrink: 0;
     }
+
     .brand-mark {
-      width: 28px;
-      height: 28px;
+      width: 30px;
+      height: 30px;
       border-radius: 8px;
       background: var(--accent);
       color: white;
       display: grid;
       place-items: center;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 800;
+      letter-spacing: -0.02em;
       flex-shrink: 0;
     }
+
     .brand-copy strong {
       display: block;
-      font-size: 15px;
+      font-size: 14px;
+      font-weight: 700;
       letter-spacing: -0.02em;
+      color: var(--text);
     }
+
     .brand-copy span {
       display: block;
-      font-size: 12px;
-      color: var(--text-3);
+      font-size: 11px;
+      color: var(--text-4);
+      line-height: 1.3;
     }
+
     .nav-center {
       display: flex;
       align-items: center;
-      gap: 6px;
-      padding: 0 14px;
+      gap: 2px;
+      padding: 0 16px;
       flex: 1;
       overflow-x: auto;
     }
+
     .nav-top-link {
-      padding: 6px 10px;
+      padding: 6px 12px;
       border-radius: var(--radius-sm);
       color: var(--text-3);
-      font-size: 14px;
+      font-size: 13.5px;
+      font-weight: 500;
       white-space: nowrap;
       transition: color var(--transition), background var(--transition);
     }
+
     .nav-top-link:hover {
-      color: var(--text-2);
-      background: var(--bg-1);
+      color: var(--text);
+      background: var(--bg-2);
     }
+
     .nav-right {
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 0 18px;
+      padding: 0 16px;
       flex-shrink: 0;
     }
+
     .ghost-btn,
     .theme-btn,
     .menu-btn {
       border: 1px solid var(--line);
-      background: transparent;
+      background: var(--panel);
       color: var(--text-3);
       border-radius: var(--radius-sm);
-      padding: 7px 12px;
+      padding: 6px 12px;
       cursor: pointer;
       transition: all var(--transition);
       font-family: var(--font);
       font-size: 13px;
+      font-weight: 500;
     }
+
     .ghost-btn:hover,
     .theme-btn:hover,
     .menu-btn:hover {
-      color: var(--text-2);
+      color: var(--text);
       border-color: var(--line-2);
       background: var(--bg-1);
     }
+
     .menu-btn { display: none; }
 
+    /* ─── Shell ─── */
     .shell {
       display: flex;
       min-height: 100vh;
       padding-top: var(--nav-h);
     }
+
+    /* ─── Sidebar ─── */
     .sidebar {
       width: var(--sidebar-w);
       min-width: var(--sidebar-w);
@@ -218,23 +244,34 @@
       padding-bottom: 24px;
       z-index: 120;
     }
-    .sidebar::-webkit-scrollbar { width: 0; }
+
+    .sidebar::-webkit-scrollbar { width: 4px; }
+    .sidebar::-webkit-scrollbar-track { background: transparent; }
+    .sidebar::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 4px; }
+
     .sb-search-wrap {
       position: sticky;
       top: 0;
       background: var(--panel);
-      padding: 12px 10px 6px;
+      padding: 12px 12px 8px;
       z-index: 2;
     }
+
     .sb-search {
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 10px;
+      padding: 8px 12px;
       background: var(--bg-1);
       border: 1px solid var(--line);
       border-radius: var(--radius-sm);
+      transition: border-color var(--transition);
     }
+
+    .sb-search:focus-within {
+      border-color: var(--accent);
+    }
+
     .sb-search input {
       border: none;
       outline: none;
@@ -242,80 +279,100 @@
       color: var(--text);
       width: 100%;
       font-size: 13px;
+      font-family: var(--font);
     }
+
+    .sb-search input::placeholder { color: var(--text-4); }
+
     .sb-search kbd {
       font-family: var(--mono);
       font-size: 10px;
       color: var(--text-4);
       background: var(--bg-2);
       border: 1px solid var(--line);
-      border-radius: 3px;
-      padding: 1px 4px;
+      border-radius: 4px;
+      padding: 1px 5px;
+      line-height: 1.4;
     }
-    .sb-group { margin-top: 16px; }
+
+    .sb-group { margin-top: 20px; }
+
     .sb-label {
-      padding: 3px 16px 6px;
-      font-size: 12px;
+      padding: 0 16px 6px;
+      font-size: 11px;
       font-weight: 700;
-      color: var(--text-3);
-      letter-spacing: 0.02em;
+      color: var(--text-4);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
+
     .nav-item {
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 6px 16px;
-      margin: 1px 4px;
+      gap: 8px;
+      padding: 7px 16px;
+      margin: 1px 8px;
       color: var(--text-3);
       border-radius: var(--radius-sm);
       font-size: 13.5px;
-      transition: color var(--transition), background var(--transition);
+      font-weight: 450;
+      transition: all var(--transition);
+      cursor: pointer;
     }
+
     .nav-item:hover {
-      color: var(--text-2);
+      color: var(--text);
       background: var(--bg-1);
     }
+
     .nav-item.active {
       color: var(--accent-text);
       background: var(--accent-soft);
       font-weight: 600;
     }
+
     .nav-badge {
       margin-left: auto;
       font-size: 10px;
-      padding: 1px 6px;
+      padding: 2px 7px;
       border-radius: 999px;
       background: var(--bg-2);
       color: var(--text-4);
-      border: 1px solid var(--line);
+      font-weight: 500;
     }
+
     .sb-bottom {
-      margin-top: 18px;
-      padding: 12px 14px 0;
+      margin-top: 20px;
+      padding: 16px 16px 0;
       border-top: 1px solid var(--line);
       color: var(--text-4);
       font-size: 12px;
+      line-height: 1.6;
     }
 
+    /* ─── Main Content ─── */
     .content {
       margin-left: var(--sidebar-w);
       width: calc(100% - var(--sidebar-w));
-      padding: 28px 32px 56px;
+      padding: 40px 48px 80px;
     }
+
     .content-wrap {
-      max-width: 1060px;
+      max-width: 860px;
       margin: 0 auto;
     }
 
+    /* ─── Hero ─── */
     .hero {
-      padding: 8px 0 28px;
+      padding: 0 0 40px;
       border-bottom: 1px solid var(--line);
     }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 11px;
+      gap: 6px;
+      padding: 5px 12px;
       border-radius: 999px;
       background: var(--accent-soft);
       border: 1px solid var(--accent-border);
@@ -325,33 +382,45 @@
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
+
     h1 {
-      margin: 16px 0 10px;
-      font-size: clamp(36px, 5vw, 58px);
-      line-height: 1.02;
-      letter-spacing: -0.05em;
+      margin: 20px 0 16px;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+      font-weight: 800;
+      color: var(--text);
     }
+
     h2 {
-      margin: 0 0 10px;
-      font-size: 30px;
-      letter-spacing: -0.04em;
-      line-height: 1.15;
-    }
-    h3 {
       margin: 0 0 8px;
-      font-size: 18px;
-      letter-spacing: -0.02em;
+      font-size: 24px;
+      letter-spacing: -0.03em;
       line-height: 1.2;
+      font-weight: 700;
     }
+
+    h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+      font-weight: 600;
+    }
+
     p {
       margin: 0;
       color: var(--text-2);
     }
+
     .hero p {
-      max-width: 820px;
+      max-width: 640px;
       font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-3);
     }
 
+    /* ─── Grids ─── */
     .hero-grid,
     .stats-grid,
     .phase-grid,
@@ -364,13 +433,15 @@
       display: grid;
       gap: 16px;
     }
-    .hero-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px; }
-    .stats-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 24px; }
-    .phase-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .cards-2, .files-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .cards-3, .project-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .projects-shell { margin-top: 36px; }
 
+    .hero-grid { grid-template-columns: 1fr; margin-top: 32px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); margin-top: 28px; }
+    .phase-grid { grid-template-columns: repeat(2, 1fr); }
+    .cards-2, .files-grid { grid-template-columns: repeat(2, 1fr); }
+    .cards-3, .project-facts { grid-template-columns: 1fr; }
+    .projects-shell { margin-top: 40px; }
+
+    /* ─── Cards ─── */
     .card,
     .metric,
     .project-section,
@@ -379,178 +450,273 @@
     .callout {
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 12px;
-      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
     }
+
     .card,
     .metric,
     .project-section,
     .fact,
     .file-card,
-    .callout { padding: 18px; }
+    .callout {
+      padding: 20px;
+    }
+
+    .card {
+      transition: box-shadow var(--transition), border-color var(--transition);
+    }
 
     .card:hover,
     .file-card:hover {
       border-color: var(--line-2);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .metric {
+      text-align: center;
+      padding: 24px 20px;
     }
 
     .metric strong {
       display: block;
       font-size: 28px;
       margin-bottom: 6px;
-      letter-spacing: -0.04em;
-      color: var(--text);
+      letter-spacing: -0.03em;
+      color: var(--accent-text);
+      font-weight: 800;
     }
+
     .metric span {
       color: var(--text-3);
       font-size: 13px;
+      line-height: 1.5;
     }
+
     .tag-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
+      gap: 6px;
+      margin-top: 14px;
     }
+
     .tag {
       display: inline-flex;
       align-items: center;
-      padding: 5px 9px;
+      padding: 4px 10px;
       border-radius: 999px;
       background: var(--accent-soft);
       color: var(--accent-text);
       border: 1px solid var(--accent-border);
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 600;
     }
+
+    /* ─── Sections ─── */
     .section {
-      padding: 38px 0;
+      padding: 40px 0;
       border-bottom: 1px solid var(--line);
-      scroll-margin-top: calc(var(--nav-h) + 18px);
+      scroll-margin-top: calc(var(--nav-h) + 20px);
     }
+
     .section-head {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
     }
+
     .section-kicker {
       display: inline-block;
       margin-bottom: 8px;
       font-size: 12px;
       font-weight: 700;
       color: var(--accent-text);
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
+
+    .section-head p {
+      margin-top: 4px;
+      max-width: 600px;
+      color: var(--text-3);
+    }
+
+    /* ─── Phase chips ─── */
     .phase-chip,
     .project-id {
       display: inline-flex;
       align-items: center;
-      padding: 7px 11px;
+      padding: 5px 12px;
       border-radius: 999px;
-      border: 1px solid var(--line);
-      background: var(--bg-1);
-      color: var(--text-3);
+      border: 1px solid var(--accent-border);
+      background: var(--accent-soft);
+      color: var(--accent-text);
       font-size: 12px;
       font-weight: 700;
     }
+
+    /* ─── Lists ─── */
     .list {
       margin: 0;
       padding-left: 18px;
       color: var(--text-2);
     }
-    .list li + li { margin-top: 7px; }
+
+    .list li + li { margin-top: 6px; }
+    .list li { line-height: 1.6; }
+
+    /* ─── Callouts ─── */
     .callout.warning {
-      background: linear-gradient(180deg, var(--warning-bg), var(--panel));
-      color: var(--warning-text);
+      background: var(--warning-bg);
+      border-color: transparent;
     }
+
+    .callout.warning h3 { color: var(--warning-text); }
     .callout.warning p,
     .callout.warning li { color: var(--warning-text); }
-    .project-section h2 {
-      margin-bottom: 8px;
+
+    /* ─── Project sections ─── */
+    .project-section {
+      position: relative;
+      overflow: hidden;
+      padding: 28px;
     }
+
+    .project-section::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--accent);
+      border-radius: 0 3px 3px 0;
+    }
+
+    .project-section h2 {
+      margin-bottom: 6px;
+    }
+
     .project-meta {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
-      gap: 12px;
+      gap: 16px;
       flex-wrap: wrap;
-      margin-bottom: 14px;
+      margin-bottom: 20px;
     }
-    .project-id {
-      background: var(--accent-soft);
-      border-color: var(--accent-border);
-      color: var(--accent-text);
+
+    .project-meta > div { flex: 1; min-width: 200px; }
+
+    .files-grid { margin-top: 20px; }
+
+    .file-card {
+      transition: all var(--transition);
+      cursor: pointer;
     }
-    .files-grid { margin-top: 16px; }
+
+    .file-card h3 {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .file-card p {
+      font-size: 13px;
+      color: var(--text-3);
+      margin-top: 2px;
+    }
+
     .file-card small {
       display: block;
-      margin-top: 9px;
-      color: var(--text-3);
+      margin-top: 10px;
+      color: var(--text-4);
       font-family: var(--mono);
       font-size: 11px;
       word-break: break-all;
     }
+
+    /* ─── Buttons ─── */
     .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 18px;
+      margin-top: 28px;
     }
+
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 14px;
-      border-radius: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 600;
       transition: all var(--transition);
+      cursor: pointer;
     }
+
     .btn.primary {
       background: var(--accent);
       color: #fff;
       border: 1px solid var(--accent);
     }
-    .btn.primary:hover { background: var(--accent-hover); }
+
+    .btn.primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+
     .btn.secondary {
       border: 1px solid var(--line);
       color: var(--text-2);
-      background: transparent;
+      background: var(--panel);
     }
+
     .btn.secondary:hover {
       background: var(--bg-1);
       border-color: var(--line-2);
     }
+
     .footer-note {
-      padding: 26px 0 12px;
-      color: var(--text-3);
-      font-size: 14px;
+      padding: 32px 0 16px;
+      color: var(--text-4);
+      font-size: 13px;
+      text-align: center;
     }
+
     .hidden { display: none !important; }
 
-    @media (max-width: 1100px) {
-      .hero-grid,
-      .phase-grid,
-      .project-facts,
-      .cards-3,
-      .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    /* ─── Responsive ─── */
+    @media (min-width: 1100px) {
+      .hero-grid { grid-template-columns: repeat(3, 1fr); }
+      .stats-grid { grid-template-columns: repeat(4, 1fr); }
+      .cards-3, .project-facts { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (min-width: 768px) and (max-width: 1099px) {
+      .hero-grid { grid-template-columns: repeat(2, 1fr); }
+      .phase-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 920px) {
       .menu-btn { display: inline-flex; }
-      .brand-block { width: auto; min-width: 0; border-right: none; }
+      .brand-block {
+        width: auto;
+        min-width: 0;
+        border-right: none;
+        padding: 0 12px;
+      }
       .sidebar {
         transform: translateX(-100%);
-        transition: transform var(--transition);
+        transition: transform 0.25s ease;
+        box-shadow: none;
       }
-      .sidebar.open { transform: translateX(0); }
+      .sidebar.open {
+        transform: translateX(0);
+        box-shadow: 8px 0 24px rgba(0, 0, 0, 0.1);
+      }
       .content {
         margin-left: 0;
         width: 100%;
-        padding: 24px 18px 48px;
+        padding: 32px 20px 60px;
       }
       .nav-center { display: none; }
     }
@@ -563,9 +729,46 @@
       .cards-3,
       .files-grid,
       .project-facts { grid-template-columns: 1fr; }
-      h1 { font-size: 40px; }
-      h2 { font-size: 26px; }
+
+      h1 { font-size: 28px; }
+      h2 { font-size: 20px; }
+
+      .content { padding: 24px 16px 48px; }
+      .project-section { padding: 20px 16px; }
+
       .nav-right .ghost-btn:first-child { display: none; }
+
+      .metric { text-align: left; }
+
+      .project-meta {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* ─── Overlay for mobile sidebar ─── */
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 110;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .sidebar-overlay.visible {
+      display: block;
+      opacity: 1;
     }
   </style>
 </head>
@@ -576,7 +779,7 @@
       <div class="brand-mark">AI</div>
       <div class="brand-copy">
         <strong>AI Tester Blueprint</strong>
-        <span>The Testing Academy | Projects 1 to 15</span>
+        <span>The Testing Academy | Projects 1 to 28</span>
       </div>
     </div>
     <nav class="nav-center">
@@ -592,11 +795,13 @@
     </div>
   </header>
 
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
   <div class="shell">
     <aside class="sidebar" id="sidebar">
       <div class="sb-search-wrap">
         <label class="sb-search">
-          <input id="sidebarSearch" type="text" placeholder="Search projects or phases..." aria-label="Search projects or phases">
+          <input id="sidebarSearch" type="text" placeholder="Search projects..." aria-label="Search projects or phases">
           <kbd>/</kbd>
         </label>
       </div>
@@ -604,7 +809,7 @@
       <div class="sb-group">
         <div class="sb-label">Core</div>
         <a class="nav-item" href="#overview"><span>Course overview</span><span class="nav-badge">Start</span></a>
-        <a class="nav-item" href="#phases"><span>Phases</span><span class="nav-badge">5</span></a>
+        <a class="nav-item" href="#phases"><span>Phases</span><span class="nav-badge">4</span></a>
         <a class="nav-item" href="#learning-path"><span>Learning path</span></a>
       </div>
 
@@ -635,38 +840,63 @@
         <a class="nav-item" href="#project-15"><span>Project 15</span><span class="nav-badge">Embeddings</span></a>
       </div>
 
+      <div class="sb-group">
+        <div class="sb-label">Phase 4</div>
+        <a class="nav-item" href="#project-16"><span>Project 16</span><span class="nav-badge">MCP</span></a>
+        <a class="nav-item" href="#project-17"><span>Project 17</span><span class="nav-badge">Frameworks</span></a>
+        <a class="nav-item" href="#project-18"><span>Project 18</span><span class="nav-badge">CI/CD</span></a>
+        <a class="nav-item" href="#project-19"><span>Project 19</span><span class="nav-badge">LLM QA</span></a>
+      </div>
+
+      <div class="sb-group">
+        <div class="sb-label">Phase 5</div>
+        <a class="nav-item" href="#project-20"><span>Project 20</span><span class="nav-badge">LangChain</span></a>
+        <a class="nav-item" href="#project-21"><span>Project 21</span><span class="nav-badge">Graph RAG</span></a>
+        <a class="nav-item" href="#project-22"><span>Project 22</span><span class="nav-badge">Multi-Agent</span></a>
+        <a class="nav-item" href="#project-23"><span>Project 23</span><span class="nav-badge">Eval Pipeline</span></a>
+      </div>
+
+      <div class="sb-group">
+        <div class="sb-label">Phase 6</div>
+        <a class="nav-item" href="#project-24"><span>Project 24</span><span class="nav-badge">Test Data</span></a>
+        <a class="nav-item" href="#project-25"><span>Project 25</span><span class="nav-badge">Visual AI</span></a>
+        <a class="nav-item" href="#project-26"><span>Project 26</span><span class="nav-badge">API Contract</span></a>
+        <a class="nav-item" href="#project-27"><span>Project 27</span><span class="nav-badge">Flaky Tests</span></a>
+        <a class="nav-item" href="#project-28"><span>Project 28</span><span class="nav-badge">Security</span></a>
+      </div>
+
       <div class="sb-bottom">
-        Hosted docs shell inspired by your sample HTML. Repo content is sourced from AI Tester Blueprint, not copied from the sample page.
+        Use this page like a course map. Start from the top, open the linked project assets, and move module by module.
       </div>
     </aside>
 
     <main class="content">
       <div class="content-wrap">
         <section class="hero section" id="overview">
-          <span class="eyebrow">Course Documentation View</span>
-          <h1>Projects 1 to 15 in a docs-style teaching format</h1>
-          <p>This page replaces the previous flat presentation layout with a Mintlify-style documentation shell: fixed top navigation, searchable left sidebar, Inter typography, green accent styling, and project sections built from your repository. The structure follows your course, not the sample RAG page content.</p>
+          <span class="eyebrow">AI Tester Blueprint</span>
+          <h1>Learn AI for testing through 28 hands-on projects</h1>
+          <p>This course starts with local AI tools and prompt engineering, moves into apps and automation, and then expands into LangFlow, RAG, MCP, CI/CD intelligence, and LLM testing. Use this page as your student guide through the complete learning journey.</p>
 
           <div class="hero-grid">
             <div class="card">
-              <h3>15 Projects</h3>
-              <p>From local LLM tools and prompt engineering to LangFlow, RAG systems, and vector embedding visualization.</p>
+              <h3>What you will build</h3>
+              <p>Test generators, prompt frameworks, full-stack QA apps, LangFlow pipelines, RAG systems, MCP workflows, and LLM evaluation assets.</p>
             </div>
             <div class="card">
-              <h3>Teacher-friendly</h3>
-              <p>Every project has a short objective, a focus summary, a stack snapshot, and quick file links for live demos.</p>
+              <h3>What you will practice</h3>
+              <p>Prompt design, browser automation, API framework work, no-code orchestration, retrieval design, CI/CD analysis, and evaluator-driven QA.</p>
             </div>
             <div class="card">
-              <h3>Repo-backed</h3>
-              <p>The content comes from your README structure and current project folders. The sample only influenced the layout system.</p>
+              <h3>How you will learn</h3>
+              <p>Each project gives you a clear outcome, the main concepts to focus on, and direct links to the repo assets used in the session.</p>
             </div>
           </div>
 
           <div class="stats-grid">
-            <div class="metric"><strong>5</strong><span>teaching phases</span></div>
-            <div class="metric"><strong>Local + Cloud</strong><span>mixed delivery across Ollama, Groq, OpenAI, and no-code tools</span></div>
-            <div class="metric"><strong>Prompt to Product</strong><span>progression from prompt design to deployable apps</span></div>
-            <div class="metric"><strong>HTML Docs</strong><span>designed to be hosted, navigated, and taught from directly</span></div>
+            <div class="metric"><strong>28</strong><span>hands-on projects across the course</span></div>
+            <div class="metric"><strong>6</strong><span>major learning phases in this page</span></div>
+            <div class="metric"><strong>Beginner to Advanced</strong><span>from local AI basics to LLM evaluation and integration work</span></div>
+            <div class="metric"><strong>Learn by building</strong><span>every module points back to a real project artifact</span></div>
           </div>
 
           <div class="actions">
@@ -681,7 +911,7 @@
             <div>
               <span class="section-kicker">Course structure</span>
               <h2>How the course is grouped</h2>
-              <p>The course becomes easier to teach when projects are grouped by why they exist, not just by numbering. The five phases below are directly aligned with the progression already visible in the repository.</p>
+              <p>The projects are grouped so you can progress from fundamentals to advanced integrations in a logical order, instead of seeing AI testing as a random collection of tools.</p>
             </div>
           </div>
           <div class="phase-grid">
@@ -700,6 +930,21 @@
               <p>Projects 11 to 15 cover LangFlow basics, RAG theory, visual flow engineering, modular RAG apps, and embeddings.</p>
               <div class="tag-row"><span class="tag">Projects 11-15</span><span class="tag">LangFlow</span><span class="tag">RAG</span></div>
             </div>
+            <div class="card">
+              <h3>Phase 4: Advanced Integrations and LLM QA</h3>
+              <p>Projects 16 to 19 extend the course into MCP workflows, AI-assisted framework engineering, CI/CD augmentation, and LLM testing.</p>
+              <div class="tag-row"><span class="tag">Projects 16-19</span><span class="tag">MCP</span><span class="tag">LLM Testing</span></div>
+            </div>
+            <div class="card">
+              <h3>Phase 5: LangChain for QA Engineers</h3>
+              <p>Projects 20 to 23 teach LangChain foundations, Graph RAG with Neo4j, multi-agent orchestration, and automated LLM evaluation pipelines.</p>
+              <div class="tag-row"><span class="tag">Projects 20-23</span><span class="tag">LangChain</span><span class="tag">Graph RAG</span></div>
+            </div>
+            <div class="card">
+              <h3>Phase 6: Advanced SDET + AI</h3>
+              <p>Projects 24 to 28 apply AI to real SDET pain points: test data generation, visual regression, API contracts, flaky test analysis, and security testing.</p>
+              <div class="tag-row"><span class="tag">Projects 24-28</span><span class="tag">SDET</span><span class="tag">Advanced AI</span></div>
+            </div>
           </div>
         </section>
 
@@ -707,8 +952,8 @@
           <div class="section-head">
             <div>
               <span class="section-kicker">Teaching path</span>
-              <h2>A simple way to present the full course</h2>
-              <p>If students get lost, come back to this route. It keeps the course from feeling like disconnected demos.</p>
+              <h2>How you move through the program</h2>
+              <p>Think of this as the learning route for the full blueprint. Every later phase becomes easier once the earlier phase is clear.</p>
             </div>
           </div>
           <div class="cards-3">
@@ -717,12 +962,24 @@
               <p>Projects 1 to 4 show how to control prompt behavior, model behavior, and input structure before introducing more moving parts.</p>
             </div>
             <div class="callout">
-              <h3>2. Move to useful systems</h3>
+              <h3>2. Build useful systems</h3>
               <p>Projects 5 to 10 turn AI into visible workflow value: apps, agents, JIRA integration, and content or bug workflows.</p>
             </div>
             <div class="callout">
-              <h3>3. Finish with retrieval</h3>
+              <h3>3. Learn retrieval and flow engineering</h3>
               <p>Projects 11 to 15 close the loop by moving from LangFlow fundamentals to retrieval theory, flow engineering, product code, and embeddings.</p>
+            </div>
+            <div class="callout">
+              <h3>4. Extend into advanced QA integrations</h3>
+              <p>Projects 16 to 19 connect AI to MCP, framework engineering, CI/CD analysis, and evaluator-driven LLM testing.</p>
+            </div>
+            <div class="callout">
+              <h3>5. Master LangChain and Graph RAG</h3>
+              <p>Projects 20 to 23 teach LangChain deeply, build Graph RAG knowledge bases, orchestrate multi-agent QA workflows, and automate LLM evaluation pipelines.</p>
+            </div>
+            <div class="callout">
+              <h3>6. Apply AI to real SDET challenges</h3>
+              <p>Projects 24 to 28 tackle the hardest SDET problems: test data generation, visual regression, API contracts, flaky test maintenance, and security testing.</p>
             </div>
           </div>
         </section>
@@ -731,7 +988,7 @@
         <div class="projects-shell" id="projectsContainer"></div>
 
         <div class="footer-note">
-          This page now uses the sample only as a design reference: menu structure, side panel, docs styling, typography, and overall interaction model. The project summaries themselves are from your AI Tester Blueprint repository and the current folder mapping.
+          This page is designed to be presented directly to students. Use the sidebar to navigate by phase or jump into any project when you are ready to go hands-on.
         </div>
       </div>
     </main>
@@ -1024,6 +1281,275 @@
           { label: 'Backend API', href: '../Project_15_Vector_Embeddings_Visualizer/backend/app.py' },
           { label: 'Frontend UI', href: '../Project_15_Vector_Embeddings_Visualizer/frontend/index.html' }
         ]
+      },
+      {
+        id: 16,
+        phase: 'Phase 4',
+        title: 'MCP Basics',
+        objective: 'Introduce MCP-driven QA workflows using Playwright orchestration, execution evidence, and JIRA-linked reporting ideas.',
+        focus: 'MCP, browser orchestration, evidence capture',
+        stack: 'Playwright MCP, JIRA workflow concepts, HTML reporting',
+        concept: 'Tool-connected QA execution with AI assistance',
+        highlights: [
+          'Playwright-driven test execution through MCP',
+          'Failure evidence and screenshot-oriented reporting',
+          'Bridges AI prompting with browser and issue-tracking actions'
+        ],
+        links: [
+          { label: 'README', href: '../Project_16_MCP_Basic/README.md' },
+          { label: 'Learning', href: '../Project_16_MCP_Basic/01_Learning/README.md' },
+          { label: 'Exercises', href: '../Project_16_MCP_Basic/02_Exercises/README.md' },
+          { label: 'Interview Questions', href: '../Project_16_MCP_Basic/03_Interview_Questions/README.md' }
+        ]
+      },
+      {
+        id: 17,
+        phase: 'Phase 4',
+        title: 'AI + Test Frameworks',
+        objective: 'Teach how AI can scaffold, review, and accelerate Selenium, Playwright, and API framework work without replacing framework design judgment.',
+        focus: 'Framework architecture, AI-assisted scaffolding',
+        stack: 'Selenium, Playwright, API frameworks, Markdown learning assets',
+        concept: 'AI-assisted framework engineering',
+        highlights: [
+          'Core learning, exercises, and QA starter projects',
+          'Focus on framework generation, review, and design guardrails',
+          'Covers Selenium, Playwright, and API framework setup patterns'
+        ],
+        links: [
+          { label: 'README', href: '../Project_17_AI_Test_Frameworks/README.md' },
+          { label: 'Learning', href: '../Project_17_AI_Test_Frameworks/01_Learning/README.md' },
+          { label: 'Exercises', href: '../Project_17_AI_Test_Frameworks/02_Exercises/README.md' },
+          { label: 'Interview Questions', href: '../Project_17_AI_Test_Frameworks/03_Interview_Questions/README.md' }
+        ]
+      },
+      {
+        id: 18,
+        phase: 'Phase 4',
+        title: 'CI/CD + AI',
+        objective: 'Show where AI fits safely inside QA delivery pipelines for summarization, triage, and bounded debugging support.',
+        focus: 'CI/CD, reporting, failure triage',
+        stack: 'Jenkins, GitHub Actions, LLM prompts, pipeline artifacts',
+        concept: 'AI-augmented delivery visibility',
+        highlights: [
+          'Separates pipeline assistance from release authority',
+          'Includes learning exercises and three starter QA projects',
+          'Covers Jenkins, GitHub Actions, and debug-step patterns'
+        ],
+        links: [
+          { label: 'README', href: '../Project_18_CICD_AI/README.md' },
+          { label: 'Learning', href: '../Project_18_CICD_AI/01_Learning/README.md' },
+          { label: 'Exercises', href: '../Project_18_CICD_AI/02_Exercises/README.md' },
+          { label: 'Interview Questions', href: '../Project_18_CICD_AI/03_Interview_Questions/README.md' }
+        ]
+      },
+      {
+        id: 19,
+        phase: 'Phase 4',
+        title: 'LLM Testing',
+        objective: 'Train students to test LLM systems for accuracy, safety, reliability, hallucinations, and structured output quality.',
+        focus: 'LLM QA, evaluation, reliability',
+        stack: 'DeepEval, Promptfoo, TruLens, OpenAI Evals',
+        concept: 'Testing LLM applications like real software systems',
+        highlights: [
+          'Introduces evaluator-based QA for LLM apps',
+          'Covers safety, reliability, and hallucination risks',
+          'Organized into learning notes, exercises, and starter projects'
+        ],
+        links: [
+          { label: 'README', href: '../Project_19_LLM_Testing/README.md' },
+          { label: 'Learning', href: '../Project_19_LLM_Testing/01_Learning/README.md' },
+          { label: 'Exercises', href: '../Project_19_LLM_Testing/02_Exercises/README.md' },
+          { label: 'Interview Questions', href: '../Project_19_LLM_Testing/03_Interview_Questions/README.md' }
+        ]
+      },
+      {
+        id: 20,
+        phase: 'Phase 5',
+        title: 'LangChain Foundations for Testers',
+        objective: 'Learn LangChain chains, agents, tools, output parsers, and memory — entirely through QA-specific use cases instead of generic chatbot demos.',
+        focus: 'LangChain fundamentals, structured QA output',
+        stack: 'Python, LangChain, Ollama/Groq, Pydantic',
+        concept: 'QA-first LangChain workflows',
+        highlights: [
+          'Build a chain: user story to structured test cases with schema validation',
+          'LangChain agent with tools for file reading, API calling, and test planning',
+          'Pydantic output parsers for structured QA artifacts (test plans, bug reports)',
+          'Memory-enabled QA chatbot that remembers project context across conversations'
+        ],
+        links: [
+          { label: 'README', href: '../Project_20_LangChain_Foundations_Testers/README.md' },
+          { label: 'Learning', href: '../Project_20_LangChain_Foundations_Testers/01_Learning/README.md' },
+          { label: 'Exercises', href: '../Project_20_LangChain_Foundations_Testers/02_Exercises/README.md' },
+          { label: 'Interview Questions', href: '../Project_20_LangChain_Foundations_Testers/03_Interview_Questions/README.md' }
+        ]
+      },
+      {
+        id: 21,
+        phase: 'Phase 5',
+        title: 'Graph RAG QA Knowledge Base',
+        objective: 'Build a full Graph RAG system using LangChain and Neo4j for QA knowledge management, test coverage mapping, and impact analysis.',
+        focus: 'Graph RAG, knowledge graphs, impact analysis',
+        stack: 'Python, LangChain, Neo4j, FastAPI, HTML UI',
+        concept: 'Knowledge graph for test intelligence',
+        highlights: [
+          'Ingest test documentation into a knowledge graph with entity extraction',
+          'Cypher-powered queries: "What tests cover the payment module?"',
+          'Impact analysis: "If Feature X changes, which test cases need updating?"',
+          'Visual graph explorer UI for navigating relationships'
+        ],
+        links: [
+          { label: 'README', href: '../Project_21_GraphRAG_QA_KnowledgeBase/README.md' },
+          { label: 'Learning', href: '../Project_21_GraphRAG_QA_KnowledgeBase/01_Learning/README.md' },
+          { label: 'Exercises', href: '../Project_21_GraphRAG_QA_KnowledgeBase/02_Exercises/README.md' },
+          { label: 'Interview Questions', href: '../Project_21_GraphRAG_QA_KnowledgeBase/03_Interview_Questions/README.md' }
+        ]
+      },
+      {
+        id: 22,
+        phase: 'Phase 5',
+        title: 'Multi-Agent Test Orchestrator',
+        objective: 'Build a multi-agent system using LangGraph where specialized AI agents collaborate on QA tasks — planning, generating, reviewing, executing, and reporting.',
+        focus: 'Multi-agent patterns, LangGraph, QA orchestration',
+        stack: 'Python, LangChain (LangGraph), Groq/OpenAI, Playwright',
+        concept: 'AI agents that mirror real QA team workflows',
+        highlights: [
+          'Planner, Generator, Reviewer, Executor, and Reporter agents',
+          'Agent handoff patterns with shared state and supervisor routing',
+          'Mirrors the real QA workflow: plan, write, review, execute, report',
+          'Integration with Playwright MCP for test execution'
+        ],
+        links: [
+          { label: 'README', href: '../Project_22_MultiAgent_Test_Orchestrator/README.md' },
+          { label: 'Learning', href: '../Project_22_MultiAgent_Test_Orchestrator/01_Learning/README.md' },
+          { label: 'Exercises', href: '../Project_22_MultiAgent_Test_Orchestrator/02_Exercises/README.md' },
+          { label: 'Interview Questions', href: '../Project_22_MultiAgent_Test_Orchestrator/03_Interview_Questions/README.md' }
+        ]
+      },
+      {
+        id: 23,
+        phase: 'Phase 5',
+        title: 'LangChain Evaluation Pipeline',
+        objective: 'Build automated evaluation pipelines using LangChain, RAGAS, and DeepEval for continuous RAG and LLM quality monitoring in CI/CD.',
+        focus: 'LLM evaluation, RAGAS metrics, CI/CD integration',
+        stack: 'Python, LangChain, RAGAS, DeepEval, GitHub Actions, FastAPI',
+        concept: 'LLM quality as automated regression testing',
+        highlights: [
+          'Automated RAG evaluation: faithfulness, relevancy, precision, recall',
+          'Golden dataset creation and management for regression testing',
+          'Drift detection to monitor LLM output quality over time',
+          'CI/CD integration: run eval suite on every prompt template change'
+        ],
+        links: [
+          { label: 'README', href: '../Project_23_LangChain_Eval_Pipeline/README.md' },
+          { label: 'Learning', href: '../Project_23_LangChain_Eval_Pipeline/01_Learning/README.md' },
+          { label: 'Exercises', href: '../Project_23_LangChain_Eval_Pipeline/02_Exercises/README.md' },
+          { label: 'Interview Questions', href: '../Project_23_LangChain_Eval_Pipeline/03_Interview_Questions/README.md' }
+        ]
+      },
+      {
+        id: 24,
+        phase: 'Phase 6',
+        title: 'AI-Powered Test Data Generation',
+        objective: 'Use LLMs to generate realistic, schema-aware test data for APIs, databases, and UI forms — solving the biggest data bottleneck in QA.',
+        focus: 'Test data generation, schema-aware synthesis',
+        stack: 'Python, LangChain/OpenAI, Faker, Pydantic, SQLite',
+        concept: 'AI-driven synthetic test data at scale',
+        highlights: [
+          'Generate test data from OpenAPI/Swagger specs automatically',
+          'Database-aware generation: respects foreign keys, constraints, enums',
+          'Edge case generation: boundary values, Unicode, injection strings',
+          'Privacy-safe synthetic data from production schemas'
+        ],
+        links: [
+          { label: 'README', href: '../Project_24_AI_TestData_Generation/README.md' },
+          { label: 'Learning', href: '../Project_24_AI_TestData_Generation/01_Learning/README.md' },
+          { label: 'Exercises', href: '../Project_24_AI_TestData_Generation/02_Exercises/README.md' },
+          { label: 'Interview Questions', href: '../Project_24_AI_TestData_Generation/03_Interview_Questions/README.md' }
+        ]
+      },
+      {
+        id: 25,
+        phase: 'Phase 6',
+        title: 'AI Visual Regression Testing',
+        objective: 'Use multimodal LLMs to intelligently detect and assess visual UI changes beyond traditional pixel-diff tools.',
+        focus: 'Visual testing, multimodal AI, Playwright',
+        stack: 'Playwright, OpenAI Vision/Claude Vision, Python, HTML',
+        concept: 'AI-powered visual QA with intent understanding',
+        highlights: [
+          'Screenshot capture pipeline across pages and viewports',
+          'AI-powered diff analysis: understands intent, not just pixels',
+          'Severity classification: critical visual bug vs. acceptable variation',
+          'HTML report with side-by-side comparisons and AI verdicts'
+        ],
+        links: [
+          { label: 'README', href: '../Project_25_AI_Visual_Regression/README.md' },
+          { label: 'Learning', href: '../Project_25_AI_Visual_Regression/01_Learning/README.md' },
+          { label: 'Exercises', href: '../Project_25_AI_Visual_Regression/02_Exercises/README.md' },
+          { label: 'Interview Questions', href: '../Project_25_AI_Visual_Regression/03_Interview_Questions/README.md' }
+        ]
+      },
+      {
+        id: 26,
+        phase: 'Phase 6',
+        title: 'AI API Contract Testing',
+        objective: 'Use LLMs to generate, validate, and monitor API contracts and detect breaking changes across microservices.',
+        focus: 'API contract testing, breaking change detection',
+        stack: 'Python, LangChain, Schemathesis, FastAPI, OpenAPI',
+        concept: 'AI-accelerated API contract validation',
+        highlights: [
+          'Auto-generate OpenAPI specs from API behavior observation',
+          'Contract drift detection: compare responses against spec',
+          'Breaking change analysis with consumer impact assessment',
+          'AI-generated consumer-driven contract tests'
+        ],
+        links: [
+          { label: 'README', href: '../Project_26_AI_API_Contract_Testing/README.md' },
+          { label: 'Learning', href: '../Project_26_AI_API_Contract_Testing/01_Learning/README.md' },
+          { label: 'Exercises', href: '../Project_26_AI_API_Contract_Testing/02_Exercises/README.md' },
+          { label: 'Interview Questions', href: '../Project_26_AI_API_Contract_Testing/03_Interview_Questions/README.md' }
+        ]
+      },
+      {
+        id: 27,
+        phase: 'Phase 6',
+        title: 'Intelligent Test Maintenance',
+        objective: 'Build an AI system that analyzes test failures, identifies flaky tests, suggests fixes, and auto-heals broken locators.',
+        focus: 'Flaky test analysis, self-healing locators, test maintenance',
+        stack: 'Python, LangChain, Playwright, Git analysis, SQLite',
+        concept: 'AI-driven test suite health management',
+        highlights: [
+          'Flaky test detector with statistical pass/fail pattern analysis',
+          'Root cause classifier: timing, data dependency, environment, or real bug',
+          'Self-healing locators: AI suggests updated selectors from page snapshots',
+          'Priority ranker: fix the tests that unblock the most other tests first'
+        ],
+        links: [
+          { label: 'README', href: '../Project_27_Intelligent_Test_Maintenance/README.md' },
+          { label: 'Learning', href: '../Project_27_Intelligent_Test_Maintenance/01_Learning/README.md' },
+          { label: 'Exercises', href: '../Project_27_Intelligent_Test_Maintenance/02_Exercises/README.md' },
+          { label: 'Interview Questions', href: '../Project_27_Intelligent_Test_Maintenance/03_Interview_Questions/README.md' }
+        ]
+      },
+      {
+        id: 28,
+        phase: 'Phase 6',
+        title: 'AI Security Testing Assistant',
+        objective: 'Use AI for prompt-driven security testing — vulnerability scanning, payload generation, scanner result analysis, and prompt injection testing.',
+        focus: 'Security testing, vulnerability scanning, prompt injection',
+        stack: 'Python, LangChain, OWASP ZAP, Playwright',
+        concept: 'AI-augmented application security testing',
+        highlights: [
+          'AI-generated security test cases from application context',
+          'Automated XSS/SQLi payload generation and testing',
+          'AI analysis of scanner results: dedup, severity, false positive filtering',
+          'Prompt injection testing for LLM-powered features'
+        ],
+        links: [
+          { label: 'README', href: '../Project_28_AI_Security_Testing/README.md' },
+          { label: 'Learning', href: '../Project_28_AI_Security_Testing/01_Learning/README.md' },
+          { label: 'Exercises', href: '../Project_28_AI_Security_Testing/02_Exercises/README.md' },
+          { label: 'Interview Questions', href: '../Project_28_AI_Security_Testing/03_Interview_Questions/README.md' }
+        ]
       }
     ];
 
@@ -1033,7 +1559,7 @@
         const links = project.links.map((link) => `
           <a class="file-card" href="${link.href}">
             <h3>${link.label}</h3>
-            <p>Open the relevant file or folder directly from the docs view.</p>
+            <p>Open the project asset used in this module.</p>
             <small>${link.href}</small>
           </a>
         `).join('');
@@ -1074,12 +1600,12 @@
 
             <div class="cards-2" style="margin-top: 16px;">
               <div class="callout">
-                <h3>What this project teaches</h3>
+                <h3>What you will learn</h3>
                 <ul class="list">${highlights}</ul>
               </div>
               <div class="callout">
-                <h3>Teaching usage</h3>
-                <p>Use this project when you want to explain <strong>${project.concept}</strong> through a concrete repo artifact rather than an abstract lecture. The docs page keeps the explanation short so you can drill into files live.</p>
+                <h3>By the end of this project</h3>
+                <p>You will understand <strong>${project.concept}</strong> and use <strong>${project.stack}</strong> to explore <strong>${project.focus}</strong> in a practical QA context.</p>
                 <div class="tag-row">
                   <span class="tag">${project.phase}</span>
                   <span class="tag">Project ${project.id}</span>
@@ -1100,14 +1626,19 @@
     buildProjectSections();
 
     const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
     const menuToggle = document.getElementById('menuToggle');
     const themeToggle = document.getElementById('themeToggle');
     const searchInput = document.getElementById('sidebarSearch');
     const navItems = Array.from(document.querySelectorAll('.nav-item[href^="#"]'));
 
-    menuToggle?.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
-    });
+    const toggleSidebar = () => {
+      const isOpen = sidebar.classList.toggle('open');
+      sidebarOverlay.classList.toggle('visible', isOpen);
+    };
+
+    menuToggle?.addEventListener('click', toggleSidebar);
+    sidebarOverlay?.addEventListener('click', toggleSidebar);
 
     const storedTheme = localStorage.getItem('aitb-docs-theme');
     if (storedTheme) {
@@ -1122,7 +1653,10 @@
     });
 
     const closeSidebarOnMobile = () => {
-      if (window.innerWidth <= 920) sidebar.classList.remove('open');
+      if (window.innerWidth <= 920) {
+        sidebar.classList.remove('open');
+        sidebarOverlay.classList.remove('visible');
+      }
     };
     navItems.forEach((link) => link.addEventListener('click', closeSidebarOnMobile));
 
